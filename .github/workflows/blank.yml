@@ -43,12 +43,17 @@ jobs:
           echo Now I need to check the aws cli version
           aws --version
           
-      # Configure AWS 
+      # Configure AWS
+      - shell: bash
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+
       - name: Configure AWS CLI
         run: |
           aws configure
-          ${{secrets.AWS_ACCESS_KEY_ID}}
-          ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          AWS_ACCESS_KEY
+          AWS_SECRET_ACCESS_KEY
           eu-west-1
           json
           
