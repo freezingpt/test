@@ -42,11 +42,9 @@ jobs:
           aws --version
           
       # Configure AWS 
-      - name: Configure AWS CLI
-        run: |
-          aws configure
-          echo AKIARPHS5DLAZVRR27XB
-          echo fjlo7f2+8r50aMp/GGjFPCAeBW1jUP3UAVD1/V5z
-          echo eu-west-1
-          echo json
- 
+      - name: Configure AWS CLI      
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
+          aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-region: eu-west-1
