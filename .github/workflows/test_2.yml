@@ -41,7 +41,7 @@ jobs:
           echo Now I need to check the aws cli version
           aws --version
           
-      # Configure AWS 
+      # Configure AWS credentials
       - name: Configure AWS CLI      
         uses: aws-actions/configure-aws-credentials@v1
         with:
