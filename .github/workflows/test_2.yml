@@ -32,4 +32,21 @@ jobs:
         run: |
           echo "$AWS_ACCESS_KEY"
           echo "$AWS_SECRET_ACCESS_KEY"
+          
+      - name: Install AWS CLI
+        run: |
+          curl "https://s3.amazonaws.com/aws-cli/awscli-bundle-1.16.312.zip" -o "awscli-bundle.zip"
+          unzip awscli-bundle.zip
+          sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+          echo Now I need to check the aws cli version
+          aws --version
+          
+      # Configure AWS 
+      - name: Configure AWS CLI
+        run: |
+          aws configure
+          "$AWS_ACCESS_KEY"
+          "$AWS_SECRET_ACCESS_KEY"
+          eu-west-1
+          json
  
