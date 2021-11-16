@@ -25,13 +25,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - shell: bash
-        env:
-          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-        run: |
-          echo "$AWS_ACCESS_KEY"
-          echo "$AWS_SECRET_ACCESS_KEY"
+      #- shell: bash
+       # env:
+        #  AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         # AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+        #run: |
+         # echo "$AWS_ACCESS_KEY"
+          #echo "$AWS_SECRET_ACCESS_KEY"
           
       - name: Install AWS CLI
         run: |
@@ -45,8 +45,8 @@ jobs:
       - name: Configure AWS CLI
         run: |
           aws configure
-          AKIARPHS5DLAZVRR27XB
-          fjlo7f2+8r50aMp/GGjFPCAeBW1jUP3UAVD1/V5z
-          eu-west-1
-          json
+          echo AKIARPHS5DLAZVRR27XB
+          echo fjlo7f2+8r50aMp/GGjFPCAeBW1jUP3UAVD1/V5z
+          echo eu-west-1
+          echo json
  
