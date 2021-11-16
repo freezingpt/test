@@ -21,13 +21,14 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+    #steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+    #  - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: isto_teste
+    #  - name: isto_teste
        # Configure AWS
+    steps:
       - shell: bash
         env:
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
