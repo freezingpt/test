@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu 18.04
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -45,8 +45,8 @@ jobs:
       - name: Configure AWS CLI
         run: |
           aws configure
-          "$AWS_ACCESS_KEY"
-          "$AWS_SECRET_ACCESS_KEY"
+          AKIARPHS5DLAZVRR27XB
+          fjlo7f2+8r50aMp/GGjFPCAeBW1jUP3UAVD1/V5z
           eu-west-1
           json
  
