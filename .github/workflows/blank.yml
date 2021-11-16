@@ -33,7 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo $PATH
-          mv ~/Downloads/terraform /usr/local/bin/
-          echo 
-          terraform -help
+          git clone https://github.com/hashicorp/terraform.git
+          cd terraform 
+          go install
     
